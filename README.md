@@ -1,16 +1,5 @@
-# PHP Docker Container Images
+# php
 
-![GitHub release (with filter)](https://img.shields.io/github/v/release/nuldark/docker-php)
-
-## Supported tags and respective Dockerfile links
-- [`8.3.8`, `8.3`, `8`, `latest`](https://github.com/nuldark/docker-php/blob/master/8.3/base/Dockerfile)
-- [`8.3.8-cli`, `8.3-cli`, `8-cli`, `cli`](https://github.com/nuldark/docker-php/blob/master/8.3/cli/Dockerfile)
-- [`8.3.8-fpm`, `8.3-fpm`, `8-fpm`, `fpm`](https://github.com/nuldark/docker-php/blob/master/8.3/fpm/Dockerfile)
-- [`8.2.20`, `8.2`](https://github.com/nuldark/docker-php/blob/master/8.2/base/Dockerfile)
-- [`8.2.20-cli`, `8.2-cli`](https://github.com/nuldark/docker-php/blob/master/8.2/cli/Dockerfile)
-- [`8.2.20-fpm`, `8.2-fpm`](https://github.com/nuldark/docker-php/blob/master/8.2/fpm/Dockerfile)
-- [`for more tags see here`](https://hub.docker.com/r/nuldark/php/tags)
-- 
 ## Quick reference
 - **Image based on**:   
   [alpine](https://hub.docker.com/_/alpine)
@@ -19,32 +8,14 @@
   `linux/amd64`, `linux/arm64`
 
 - **Maintained by**:  
-  [nuldark](https://github.com/nuldark)
+  [nulxrd](https://github.com/nulxrd)
 
 - **Where to file issues**:    
-  [https://github.com/nuldark/docker-php/issues](https://github.com/nuldark/docker-php/issues?q=)
+  [https://github.com/nulxrd/docker-php/issues](https://github.com/nulxrd/docker-php/issues?q=)
 
-## How to use this image
+## Supported tags and respective Dockerfile links
 
-### start a php instance
-
-```console
-$ docker run --name some-fpm -d php
-```
-
-### ... via [`docker-compose`](https://github.com/docker/compose)
-Example `docker-compose.yml` for `php-fpm`:
-
-```yaml
-version: '3.1'
-
-services:
-    php-fpm:
-        image: nuldark/php:latest
-        restart: always
-        ports:
-            - "9000:9000"
-```
+[`All supported tags see here`](https://hub.docker.com/r/nulxrd/php-fpm/tags)
 
 ## Environment Variables
 
