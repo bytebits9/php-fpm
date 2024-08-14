@@ -8,10 +8,10 @@
   `linux/amd64`, `linux/arm64`
 
 - **Maintained by**:  
-  [nulxrd](https://github.com/nulxrd)
+  [sxbrsky](https://github.com/sxbrsky)
 
 - **Where to file issues**:    
-  [https://github.com/nulxrd/docker-php/issues](https://github.com/nulxrd/docker-php/issues?q=)
+  [https://github.com/nulxrd/docker-php/issues](https://github.com/sxbrsky/docker-php/issues?q=)
 
 ## Supported tags and respective Dockerfile links
 
