@@ -1,5 +1,10 @@
 FROM alpine:3.20
 
+LABEL org.opencontainers.image.source="https://github.com/sxbrsky/docker-php"
+LABEL org.opencontainers.image.title="php"
+LABEL org.opencontainers.image.base.name="docker.io/library/alpine:3.20"
+LABEL org.opencontainers.image.licenses=MIT
+
 ARG PHP_VERSION=8.3.9
 ARG PHP_URL="https://www.php.net/distributions/php-${PHP_VERSION}.tar.xz"
 
