@@ -11,11 +11,11 @@
   [sxbrsky](https://github.com/sxbrsky)
 
 - **Where to file issues**:    
-  [https://github.com/nulxrd/docker-php/issues](https://github.com/sxbrsky/docker-php/issues?q=)
+  [https://github.com/sxbrsky/docker-php/issues](https://github.com/sxbrsky/docker-php/issues?q=)
 
 ## Supported tags and respective Dockerfile links
 
-[`All supported tags see here`](https://hub.docker.com/r/nulxrd/php-fpm/tags)
+[`All supported tags see here`](https://hub.docker.com/r/sxbrsky/php-fpm/tags)
 
 ## Environment Variables
 
