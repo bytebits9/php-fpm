@@ -15,7 +15,7 @@
 
 ## Supported tags and respective Dockerfile links
 
-[`All supported tags see here`](https://hub.docker.com/r/sxbrsky/php-fpm/tags)
+[`All supported tags see here`](https://hub.docker.com/r/sxbrsky/php/tags)
 
 ## Environment Variables
 
