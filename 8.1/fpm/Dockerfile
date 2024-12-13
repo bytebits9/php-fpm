@@ -1,12 +1,17 @@
-FROM alpine:3.20
+FROM alpine:3.21
 
-LABEL org.opencontainers.image.source="https://github.com/sxbrsky/docker-php"
-LABEL org.opencontainers.image.title="php"
-LABEL org.opencontainers.image.base.name="docker.io/library/alpine:3.20"
-LABEL org.opencontainers.image.licenses=MIT
-
-ARG PHP_VERSION=8.3.9
+ARG PHP_VERSION=8.1.30
 ARG PHP_URL="https://www.php.net/distributions/php-${PHP_VERSION}.tar.xz"
+
+LABEL org.opencontainers.image.base.name="docker.io/library/alpine:3.21" \
+      org.opencontainers.image.description="Application packaged by sxbrsky" \
+      org.opencontainers.image.documentation="https://github.com/sxbrsky/docker-php/tree/master/README.md" \
+      org.opencontainers.image.licenses="MIT" \
+      org.opencontainers.image.ref.name="${PHP_VERSION}" \
+      org.opencontainers.image.source="https://github.com/sxbrsky/docker-php/tree/master/8.1/fpm" \
+      org.opencontainers.image.title="php-fpm" \
+      org.opencontainers.image.vendor="sxbrsky" \
+      org.opencontainers.image.version="${PHP_VERSION}"
 
 ENV PHPIZE_DEPS \
   autoconf \
@@ -66,7 +71,7 @@ RUN set -eux; \
       CFLAGS="$PHP_CFLAGS" \
       CPPFLAGS="$PHP_CPPFLAGS" \
       LDFLAGS="$PHP_LDFLAGS" \
-      PHP_BUILD_PROVIDER='https://github.com/sxbrsky/docker-php' \
+      PHP_BUILD_PROVIDER='https://github.com/sxbrsky/docker-php-fpm' \
       PHP_UNAME='Linux - Docker' \
     ; \
   \
@@ -104,7 +109,7 @@ RUN set -eux; \
       --without-sqlite3 \
       --without-cdb \
       --with-pear \
-      --enable-cgi \
+      --disable-cgi \
       --enable-cli \
       --enable-fpm \
       --with-fpm-user=www-data \
