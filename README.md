@@ -1,5 +1,3 @@
-# php
-
 ## Quick reference
 - **Image based on**:   
   [alpine](https://hub.docker.com/_/alpine)
@@ -13,10 +11,33 @@
 - **Where to file issues**:    
   [https://github.com/sxbrsky/docker-php/issues](https://github.com/sxbrsky/docker-php/issues?q=)
 
-## Supported tags and respective Dockerfile links
+## Supported tags and respective `Dockerfile` links
+- `8.4.1`, `8.4`, `8.4.1-cli`, `8.4-cli`
+- `8.4.1-fpm`, `8.4-fpm`
+- `8.3.14`, `8.3`, `8.3.14-cli`, `8.3-cli`
+- `8.3.13-fpm`, `8.3-fpm`
+- `8.2.26`, `8.2`, `8.2.26-cli`, `8.2-cli`
+- `8.2.26-fpm`, `8.2-fpm`
+- `8.1.30`, `8.1`, `8.1.30-cli`, `8.1-cli`
+- `8.1.30-fpm`, `8.1-fpm`
 
-[`All supported tags see here`](https://hub.docker.com/r/sxbrsky/php/tags)
+## How to usage this image
 
+Create a `Dockerfile`
+```Dockerfile
+FROM php:8.4.1-cli
+COPY . /app
+WORKDIR /app
+CMD [ "php", "./script.php" ]
+```
+
+Then, build and run the Docker image
+```bash
+docker build -t php-app 
+```
+```bash
+  docker run -it --rm --name custom-app php-app
+```
 ## Environment Variables
 
 The php image uses several environment variables which are easy to miss.
