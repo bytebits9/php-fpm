@@ -6,10 +6,10 @@
   `linux/amd64`, `linux/arm64`
 
 - **Maintained by**:  
-  [sxbrsky](https://github.com/sxbrsky)
+  [grmvoid](https://github.com/grmvoid)
 
 - **Where to file issues**:    
-  [https://github.com/sxbrsky/docker-php/issues](https://github.com/sxbrsky/docker-php/issues?q=)
+  [https://github.com/grmvoid/docker-php/issues](https://github.com/grmvoid/docker-php/issues?q=)
 
 ## Supported tags and respective `Dockerfile` links
 - `8.4.1`, `8.4`, `8.4.1-cli`, `8.4-cli`
