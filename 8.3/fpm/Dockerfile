@@ -163,6 +163,23 @@ RUN set -eux; \
         sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; \
         cp php-fpm.d/www.conf.default php-fpm.d/www.conf; \
       fi; \
+      { \
+        echo '[global]'; \
+        echo 'error_log = /proc/self/fd/2'; \
+        echo; \
+        echo '[www]'; \
+        echo 'access.log = /proc/self/fd/2'; \
+        echo 'clear_env = no' ; \
+        echo 'catch_workers_output = yes' ; \
+        echo 'decorate_workers_output = no' ; \
+      } | tee php-fpm.d/docker.conf; \
+      { \
+        echo '[global]'; \
+        echo 'daemonize = no'; \
+        echo; \
+        echo '[www]'; \
+        echo 'listen = 9000'; \
+      } | tee php-fpm.d/zz-docker.conf; \
     \
       find "$PHP_INI_DIR" \
         -type f \
