@@ -12,8 +12,8 @@
   [https://github.com/grmvoid/docker-php/issues](https://github.com/grmvoid/docker-php/issues?q=)
 
 ## Supported tags and respective `Dockerfile` links
-- `8.4.1`, `8.4`, `8.4.1-cli`, `8.4-cli`
-- `8.4.1-fpm`, `8.4-fpm`
+- `8.4.2`, `8.4`, `8.4.2-cli`, `8.2-cli`
+- `8.4.2-fpm`, `8.4-fpm`
 - `8.3.14`, `8.3`, `8.3.14-cli`, `8.3-cli`
 - `8.3.14-fpm`, `8.3-fpm`
 - `8.2.26`, `8.2`, `8.2.26-cli`, `8.2-cli`
