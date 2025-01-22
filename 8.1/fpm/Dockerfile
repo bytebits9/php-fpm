@@ -24,19 +24,20 @@ ENV PHPIZE_DEPS \
   pkgconf \
   re2c
 
-  ENV PHP_SHA256=""
-  ENV PHP_INI_DIR="/usr/local/etc/php"
-  ENV PHP_SCAN_DIR="$PHP_INI_DIR/conf.d"
+ENV PHP_SHA256=""
+ENV PHP_INI_DIR="/usr/local/etc/php"
+ENV PHP_SCAN_DIR="$PHP_INI_DIR/conf.d"
 
-  ENV PHP_LDFLAGS="-Wl,-O3 -pie"
-  ENV PHP_CPPFLAGS="$PHP_CFLAGS"
-  ENV PHP_CFLAGS="-fstack-protector-strong -fpic -fpie -O3 \
+ENV PHP_LDFLAGS="-Wl,-O3 -pie"
+ENV PHP_CFLAGS="-fstack-protector-strong -fpic -fpie -O3 \
     -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 \
     -march=native \
     -funroll-loops \
     -ffast-math \
     -finline-functions \
-  "
+"
+ENV PHP_CPPFLAGS="$PHP_CFLAGS"
+
 
 COPY docker-entrypoint docker-php-* /usr/local/bin/
 
@@ -108,7 +109,6 @@ RUN set -eux; \
       --disable-rpath \
       --without-sqlite3 \
       --without-cdb \
-      --with-pear \
       --disable-cgi \
       --enable-cli \
       --enable-fpm \
@@ -132,8 +132,9 @@ RUN set -eux; \
     make clean; \
     make distclean; \
     \
-    # copy php.ini into $PHP_INIT_DIR
-      cp php.ini-production "$PHP_INI_DIR/php.ini"; \
+    # copy php.ini into $PHP_INIT_DIR \
+      mkdir -p "$PHP_INI_DIR"; \
+      cp php.ini-* "$PHP_INI_DIR/"; \
     \
     # remove sources
       cd /; \
@@ -148,10 +149,6 @@ RUN set -eux; \
     )";  \
     apk add --no-cache $runDeps; \
     apk del --no-network .build-deps; \
-  \
-  # update pecl
-    pecl update-channels; \
-    rm -rf /tmp/pear ~/.pearrc; \
   \
   # smoke test
     php --version; \
