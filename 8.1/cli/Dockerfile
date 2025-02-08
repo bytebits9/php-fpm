@@ -99,6 +99,8 @@ RUN set -eux; \
       --enable-option-checking=fatal \
       --disable-gcc-global-regs \
       --disable-rpath \
+      --enable-mbstring \
+      --enable-mysqlnd \
       --without-sqlite3 \
       --without-cdb \
       # it's cli image so disable fpm & and cgi

@@ -107,6 +107,8 @@ RUN set -eux; \
       --enable-option-checking=fatal \
       --disable-gcc-global-regs \
       --disable-rpath \
+      --enable-mbstring \
+      --enable-mysqlnd \
       --without-sqlite3 \
       --without-cdb \
       --disable-cgi \
