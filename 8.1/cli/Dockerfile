@@ -103,6 +103,7 @@ RUN set -eux; \
       --enable-mysqlnd \
       --without-sqlite3 \
       --without-cdb \
+      --with-openssl \
       # it's cli image so disable fpm & and cgi
       --disable-cgi \
       --disable-fpm \

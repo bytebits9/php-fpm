@@ -111,6 +111,7 @@ RUN set -eux; \
       --enable-mysqlnd \
       --without-sqlite3 \
       --without-cdb \
+      --with-openssl \
       --disable-cgi \
       --enable-cli \
       --enable-fpm \

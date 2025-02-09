@@ -109,6 +109,7 @@ RUN set -eux; \
       --without-sqlite3 \
       --without-cdb \
       --with-pear \
+      --with-openssl \
       --enable-mbstring \
       --enable-mysqlnd \
       --disable-cgi \
