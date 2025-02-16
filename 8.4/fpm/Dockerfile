@@ -1,6 +1,6 @@
 FROM alpine:3.21
 
-ARG PHP_VERSION=8.4.3
+ARG PHP_VERSION=8.4.4
 ARG PHP_URL="https://www.php.net/distributions/php-${PHP_VERSION}.tar.xz"
 
 LABEL org.opencontainers.image.base.name="docker.io/library/alpine:3.21" \
